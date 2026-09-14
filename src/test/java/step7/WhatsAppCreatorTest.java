@@ -1,4 +1,4 @@
-package step8;
+package step7;
 
 import org.junit.jupiter.api.Test;
 
