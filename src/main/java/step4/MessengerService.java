@@ -1,17 +1,18 @@
 package step4;
 
+import java.util.List;
+
 public class MessengerService {
 
-    private final Messenger telegram;
-    private final Messenger whatsapp;
+    private final List<Messenger> messengers;
 
     public MessengerService(Messenger telegram, Messenger whatsapp) {
-        this.telegram = telegram;
-        this.whatsapp = whatsapp;
+        this.messengers = List.of(telegram, whatsapp);
     }
 
     public void sendMessage(String message) {
-        telegram.sendMessage(message);
-        whatsapp.sendMessage(message);
+        for (Messenger messenger : messengers) {
+            messenger.sendMessage(message);
+        }
     }
 }
