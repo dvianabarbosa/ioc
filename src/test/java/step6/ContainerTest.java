@@ -1,4 +1,4 @@
-package step7;
+package step6;
 
 import java.util.List;
 import org.junit.jupiter.api.Test;
